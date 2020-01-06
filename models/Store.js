@@ -39,6 +39,7 @@ StoreSchema.pre("save", async function(next) {
     coordinates: [loc[0].longitude, loc[0].latitude],
     formattedAddress: loc[0].formattedAddress
   };
+  // do not save address
   this.address = undefined;
   next();
 });
